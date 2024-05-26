@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class SHA1Implementation {
     // Constants used in SHA-1 algorithm
     private static final int H0 = 0x67452301;
@@ -7,7 +9,12 @@ public class SHA1Implementation {
     private static final int H4 = 0xC3D2E1F0;
 
     public static void main(String[] args) {
-        String input = "Slayyyy kween";
+        String s;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the string you want to be hashed: ");
+        s = scan.nextLine();
+
+        String input = s;
         String hash = sha1(input);
         System.out.println("SHA-1 hash of \"" + input + "\": " + hash);
     }
